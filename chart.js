@@ -28,11 +28,23 @@ var options = {
   ],
   
   chart: {
-    type: 'bar',
-    stacked: true,
-    stackType: '100%',
-    background: '#e5d6bf'  // Plot area background color
-  },
+  type: 'bar',
+  stacked: true,
+  stackType: '100%',
+  background: '#e5d6bf',
+  height: 500, // desktop default
+  responsive: [{
+    breakpoint: 600,
+    options: {
+      chart: {
+        height: 300 // mobile height
+      },
+      legend: {
+        position: 'bottom'
+      }
+    }
+  }]
+},
   
   grid: {
     borderColor: '#998972ff', // Grid line color
@@ -92,4 +104,3 @@ var options = {
 
 var chart = new ApexCharts(document.querySelector("#chart"), options);
 chart.render();
-
