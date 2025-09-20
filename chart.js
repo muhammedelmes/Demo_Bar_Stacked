@@ -29,7 +29,6 @@ var options = {
   
   chart: {
     type: 'bar',
-    height: 500,
     stacked: true,
     stackType: '100%',
     background: '#e5d6bf'  // Plot area background color
@@ -93,3 +92,4 @@ var options = {
 
 var chart = new ApexCharts(document.querySelector("#chart"), options);
 chart.render();
+
